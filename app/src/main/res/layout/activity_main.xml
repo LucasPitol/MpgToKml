@@ -31,20 +31,18 @@
             android:textSize="16sp"
     />
 
-    <EditText
+    <TextView
             android:id="@+id/text_input"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_mpg"
-            android:inputType="numberSigned"
             android:layout_marginTop="60dp"
             android:padding="10dp"
-            android:textColorHint="@color/cinza4"
             android:textColor="@color/cinza2"
             android:textAlignment="center"
             android:textSize="22sp"
             android:layout_centerHorizontal="true"
     />
+
 
     <ImageView
             android:id="@+id/switch_icon"
@@ -88,14 +86,29 @@
             android:layout_marginTop="150dp"
     />
 
-    <Button
-            android:id="@+id/calculate_btn"
+    <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:layout_marginTop="200dp"
-            android:text="Calculate"
-    />
+            android:layout_height="360dp"
+            android:layout_alignParentBottom="true"
+    >
+
+        <ImageView
+                android:id="@+id/one"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/one"
+        />
+
+    </GridLayout>
+
+    <!--<Button-->
+            <!--android:id="@+id/calculate_btn"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@color/colorPrimary"-->
+            <!--android:layout_marginTop="200dp"-->
+            <!--android:text="Calculate"-->
+    <!--/>-->
 
 
 </RelativeLayout>
