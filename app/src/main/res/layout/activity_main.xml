@@ -99,6 +99,27 @@
                 app:srcCompat="@drawable/one"
         />
 
+        <ImageView
+                android:id="@+id/two"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/two"
+        />
+
+        <ImageView
+                android:id="@+id/three"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/three"
+        />
+
+        <ImageView
+                android:id="@+id/back_space"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/one"
+        />
+
     </GridLayout>
 
     <!--<Button-->

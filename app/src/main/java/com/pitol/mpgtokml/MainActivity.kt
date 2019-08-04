@@ -23,11 +23,17 @@ class MainActivity : AppCompatActivity() {
         this.mViewHolder.to = findViewById((R.id.to))
         this.mViewHolder.editValue = findViewById(R.id.text_input)
         this.mViewHolder.answer = findViewById(R.id.text_answer)
-        //this.mViewHolder.btn = findViewById(R.id.calculate_btn)
         this.mViewHolder.switchImg = findViewById(R.id.switch_icon)
 
         this.mViewHolder.keyBoard.one = findViewById(R.id.one)
-
+        this.mViewHolder.keyBoard.two = findViewById(R.id.two)
+        this.mViewHolder.keyBoard.three = findViewById(R.id.three)
+//        this.mViewHolder.keyBoard.four = findViewById(R.id.four)
+//        this.mViewHolder.keyBoard.seven = findViewById(R.id.seven)
+//        this.mViewHolder.keyBoard.eight = findViewById(R.id.eight)
+//        this.mViewHolder.keyBoard.nine= findViewById(R.id.nine)
+        this.mViewHolder.keyBoard.backSpace = findViewById(R.id.back_space)
+        //this.mViewHolder.keyBoard.dot = findViewById(R.id.dot)
 
         this.mViewHolder.editValue.text = String.format("%d %s", defaultValue, getString(R.string.text_mpg))
 
@@ -37,6 +43,46 @@ class MainActivity : AppCompatActivity() {
 
         this.mViewHolder.keyBoard.one.setOnClickListener{
             addValue(1)
+        }
+
+        this.mViewHolder.keyBoard.two.setOnClickListener{
+            addValue(2)
+        }
+
+        this.mViewHolder.keyBoard.three.setOnClickListener{
+            addValue(3)
+        }
+
+//        this.mViewHolder.keyBoard.four.setOnClickListener{
+//            addValue(4)
+//        }
+//
+//        this.mViewHolder.keyBoard.five.setOnClickListener{
+//            addValue(5)
+//        }
+//
+//        this.mViewHolder.keyBoard.six.setOnClickListener{
+//            addValue(6)
+//        }
+//
+//        this.mViewHolder.keyBoard.seven.setOnClickListener{
+//            addValue(7)
+//        }
+//
+//        this.mViewHolder.keyBoard.eight.setOnClickListener{
+//            addValue(8)
+//        }
+//
+//        this.mViewHolder.keyBoard.nine.setOnClickListener{
+//            addValue(9)
+//        }
+//
+//        this.mViewHolder.keyBoard.zero.setOnClickListener{
+//            addValue(0)
+//        }
+
+        this.mViewHolder.keyBoard.backSpace.setOnClickListener{
+            addValue(10)
         }
 
         calculate()
@@ -54,9 +100,24 @@ class MainActivity : AppCompatActivity() {
 
         var unit: String = editValue[1]
 
-        var newValue: String = String.format("%s%d %s", currentValue, input, unit)
+        var newValue: String = ""
 
-        this.mViewHolder.editValue.text = newValue
+        if (input < 10){
+            newValue = String.format("%s%d", currentValue, input)
+        } else {
+            when (input) {
+                10 ->
+                    if (currentValue.length <= 1) {
+                        newValue = "0"
+                    } else {
+                        newValue = currentValue.dropLast(1)
+
+                    }
+            }
+        }
+
+
+        this.mViewHolder.editValue.text = String.format("%s %s", newValue, unit)
 
         calculate()
     }
@@ -130,5 +191,17 @@ class MainActivity : AppCompatActivity() {
 
     private class KeyBoard {
         lateinit var one: ImageView
+        lateinit var two: ImageView
+        lateinit var three: ImageView
+//        lateinit var four: ImageView
+//        lateinit var five: ImageView
+//        lateinit var six: ImageView
+//        lateinit var seven: ImageView
+//        lateinit var eight: ImageView
+//        lateinit var nine: ImageView
+//        lateinit var zero: ImageView
+        lateinit var backSpace: ImageView
+        //lateinit var dot: ImageView
+
     }
 }
