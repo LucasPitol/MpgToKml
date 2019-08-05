@@ -28,10 +28,10 @@ class MainActivity : AppCompatActivity() {
         this.mViewHolder.keyBoard.one = findViewById(R.id.one)
         this.mViewHolder.keyBoard.two = findViewById(R.id.two)
         this.mViewHolder.keyBoard.three = findViewById(R.id.three)
-//        this.mViewHolder.keyBoard.four = findViewById(R.id.four)
-//        this.mViewHolder.keyBoard.seven = findViewById(R.id.seven)
-//        this.mViewHolder.keyBoard.eight = findViewById(R.id.eight)
-//        this.mViewHolder.keyBoard.nine= findViewById(R.id.nine)
+        this.mViewHolder.keyBoard.four = findViewById(R.id.four)
+        this.mViewHolder.keyBoard.seven = findViewById(R.id.seven)
+        this.mViewHolder.keyBoard.eight = findViewById(R.id.eight)
+        this.mViewHolder.keyBoard.nine= findViewById(R.id.nine)
         this.mViewHolder.keyBoard.backSpace = findViewById(R.id.back_space)
         //this.mViewHolder.keyBoard.dot = findViewById(R.id.dot)
 
@@ -53,33 +53,33 @@ class MainActivity : AppCompatActivity() {
             addValue(3)
         }
 
-//        this.mViewHolder.keyBoard.four.setOnClickListener{
-//            addValue(4)
-//        }
-//
-//        this.mViewHolder.keyBoard.five.setOnClickListener{
-//            addValue(5)
-//        }
-//
-//        this.mViewHolder.keyBoard.six.setOnClickListener{
-//            addValue(6)
-//        }
-//
-//        this.mViewHolder.keyBoard.seven.setOnClickListener{
-//            addValue(7)
-//        }
-//
-//        this.mViewHolder.keyBoard.eight.setOnClickListener{
-//            addValue(8)
-//        }
-//
-//        this.mViewHolder.keyBoard.nine.setOnClickListener{
-//            addValue(9)
-//        }
-//
-//        this.mViewHolder.keyBoard.zero.setOnClickListener{
-//            addValue(0)
-//        }
+        this.mViewHolder.keyBoard.four.setOnClickListener{
+            addValue(4)
+        }
+
+        this.mViewHolder.keyBoard.five.setOnClickListener{
+            addValue(5)
+        }
+
+        this.mViewHolder.keyBoard.six.setOnClickListener{
+            addValue(6)
+        }
+
+        this.mViewHolder.keyBoard.seven.setOnClickListener{
+            addValue(7)
+        }
+
+        this.mViewHolder.keyBoard.eight.setOnClickListener{
+            addValue(8)
+        }
+
+        this.mViewHolder.keyBoard.nine.setOnClickListener{
+            addValue(9)
+        }
+
+        this.mViewHolder.keyBoard.zero.setOnClickListener{
+            addValue(0)
+        }
 
         this.mViewHolder.keyBoard.backSpace.setOnClickListener{
             addValue(10)
@@ -193,13 +193,13 @@ class MainActivity : AppCompatActivity() {
         lateinit var one: ImageView
         lateinit var two: ImageView
         lateinit var three: ImageView
-//        lateinit var four: ImageView
-//        lateinit var five: ImageView
-//        lateinit var six: ImageView
-//        lateinit var seven: ImageView
-//        lateinit var eight: ImageView
-//        lateinit var nine: ImageView
-//        lateinit var zero: ImageView
+        lateinit var four: ImageView
+        lateinit var five: ImageView
+        lateinit var six: ImageView
+        lateinit var seven: ImageView
+        lateinit var eight: ImageView
+        lateinit var nine: ImageView
+        lateinit var zero: ImageView
         lateinit var backSpace: ImageView
         //lateinit var dot: ImageView
 

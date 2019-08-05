@@ -90,34 +90,113 @@
             android:layout_width="match_parent"
             android:layout_height="360dp"
             android:layout_alignParentBottom="true"
+            android:columnCount="4"
     >
 
         <ImageView
+                android:id="@+id/seven"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/seven"
+        />
+
+        <ImageView
+                android:id="@+id/eight"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/eight"
+        />
+
+        <ImageView
+                android:id="@+id/nine"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/nine"
+        />
+
+        <ImageView
+                android:id="@+id/c"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/letterc"
+        />
+
+        <ImageView
+                android:id="@+id/four"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/four"
+        />
+
+        <ImageView
+                android:id="@+id/five"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/five"
+        />
+
+        <ImageView
+                android:id="@+id/six"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/six"
+        />
+
+        <ImageView
+                android:id="@+id/back_space"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/backspace"
+        />
+
+        <ImageView
                 android:id="@+id/one"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 app:srcCompat="@drawable/one"
         />
 
         <ImageView
                 android:id="@+id/two"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 app:srcCompat="@drawable/two"
         />
 
         <ImageView
                 android:id="@+id/three"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 app:srcCompat="@drawable/three"
         />
 
         <ImageView
-                android:id="@+id/back_space"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                app:srcCompat="@drawable/one"
+                android:id="@+id/equal"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/three"
+        />
+
+        <ImageView
+                android:id="@+id/empty"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/empty"
+        />
+
+        <ImageView
+                android:id="@+id/zero"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/zero"
+        />
+
+        <ImageView
+                android:id="@+id/dot"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                app:srcCompat="@drawable/dot"
+                android:layout_margin="25dp"
         />
 
     </GridLayout>
