@@ -13,6 +13,7 @@ class _MyAppState extends State<MyApp> {
   double defaultMargin = 10.0;
 
   final String kmlText = 'Km/l';
+  final String mpgText = 'Mpg';
 
   // TextEditingController _userInput;
   String _userInput;
@@ -54,7 +55,7 @@ class _MyAppState extends State<MyApp> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Container(
-                            width: 100,
+                            width: 80,
                             margin: EdgeInsets.only(
                                 top: 100,
                                 right: defaultMargin,
@@ -86,11 +87,29 @@ class _MyAppState extends State<MyApp> {
                           ),
                         ],
                       ),
-                      Container(
-                        child: Text(
-                          this.result,
-                          style: TextStyle(fontSize: 21),
-                        ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Container(
+                            margin: EdgeInsets.only(
+                              top: defaultMargin,
+                              left: defaultMargin,
+                              right: defaultMargin,
+                            ),
+                            child: Text(
+                              this.result,
+                              style: TextStyle(fontSize: 21),
+                            ),
+                          ),
+                          Container(
+                            margin:
+                                EdgeInsets.only(top: defaultMargin, right: defaultMargin),
+                            child: Text(
+                              this.mpgText,
+                              style: TextStyle(color: Colors.grey),
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
