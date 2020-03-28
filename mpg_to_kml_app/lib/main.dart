@@ -20,13 +20,23 @@ class _MyAppState extends State<MyApp> {
   String result = '0';
   String textHint;
 
+  bool kmlToMpg = true;
+
+  void _switchConversor() {
+    setState(() {
+      this.kmlToMpg = !kmlToMpg;
+    });
+
+    this._calculate();
+  }
+
   void _calculate() {
     double resultDouble = 0;
 
     if ((this._userInput != null) && (this._userInput.trim() != '')) {
       var userInputDouble = double.parse(this._userInput);
 
-      resultDouble = userInputDouble * 2.8248093627967;
+      resultDouble = this.kmlToMpg ? (userInputDouble * 2.3521458329476) : (userInputDouble * 0.4251437075);
     }
 
     setState(() {
@@ -42,6 +52,14 @@ class _MyAppState extends State<MyApp> {
         accentColor: Colors.orange,
       ),
       home: Scaffold(
+        floatingActionButton: FloatingActionButton(
+          onPressed: this._switchConversor,
+          child: Icon(
+            Icons.swap_vert,
+            color: Colors.white,
+          ),
+          backgroundColor: Colors.deepPurple,
+        ),
         resizeToAvoidBottomPadding: true,
         backgroundColor: Colors.white,
         body: Container(
@@ -81,7 +99,7 @@ class _MyAppState extends State<MyApp> {
                             margin:
                                 EdgeInsets.only(top: 100, right: defaultMargin),
                             child: Text(
-                              this.kmlText,
+                              this.kmlToMpg ? this.kmlText : this.mpgText,
                               style: TextStyle(color: Colors.grey),
                             ),
                           ),
@@ -102,10 +120,10 @@ class _MyAppState extends State<MyApp> {
                             ),
                           ),
                           Container(
-                            margin:
-                                EdgeInsets.only(top: defaultMargin, right: defaultMargin),
+                            margin: EdgeInsets.only(
+                                top: defaultMargin, right: defaultMargin),
                             child: Text(
-                              this.mpgText,
+                              this.kmlToMpg ? this.mpgText : this.kmlText,
                               style: TextStyle(color: Colors.grey),
                             ),
                           ),
